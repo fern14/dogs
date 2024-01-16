@@ -1,18 +1,11 @@
-import { useContext } from "react"
-import { UserContext } from "../userContext"
-import { Navigate } from "react-router-dom";
-
+import Feed from './Feed/Feed';
 
 const Home = () => {
 
-  const { login } = useContext(UserContext);
-
-  if (!login) return <Navigate to="/login" />
-
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <section className='container mainContainer'>
+      <Feed />
+    </section>
   )
 }
 
